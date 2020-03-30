@@ -21,11 +21,9 @@
         android:id="@+id/btnPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="80dp"
         android:background="#FF5722"
-        android:text="Button"
+        android:text="Pause"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPlayVideo"
         tools:text="pause " />
@@ -47,11 +45,51 @@
         android:id="@+id/btnPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="80dp"
         android:background="#FF5722"
         android:text="Play music"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPlayVideo" />
+
+    <SeekBar
+        android:id="@+id/seekBarVolume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnPause"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="84dp"
+        android:text="Change Volume of music"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayVideo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Move Back and Forth"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+        app:layout_constraintStart_toEndOf="@+id/btnPause"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarVolume"
+        tools:text="move back and forth" />
+
+    <SeekBar
+        android:id="@+id/seekBarMove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+        app:layout_constraintStart_toEndOf="@+id/btnPause"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
