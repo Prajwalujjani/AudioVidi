@@ -87,8 +87,8 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
             }
         });
 
-        seekBarMoveBackAndForth.setOnSeekBarChangeListener(this); //to work seekBar hanging volume
-        seekBarMoveBackAndForth.setMax(mediaPlayer.getCurrentPosition()); // idu music yav time alli odtide anta set madodu
+        seekBarMoveBackAndForth.setOnSeekBarChangeListener(this); //to progress duration of music
+        seekBarMoveBackAndForth.setMax(mediaPlayer.getDuration()); // idu music yav time alli odtide anta set madodu
         // and max duration ge karkond ogalla
 
         mediaPlayer.setOnCompletionListener(this);
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
         switch (buttonView.getId()) {
             case R.id.btnPlayVideo:
-                Uri videoUri = Uri.parse("android.resourse://" + getPackageName() + "/" + R.raw.video);
+                Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
 
                 myVideoView.setVideoURI(videoUri);
                 myVideoView.setMediaController(mediaController);
